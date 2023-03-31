@@ -56,6 +56,8 @@ class App {
       return;
     }
 
+    console.log(this.driver);
+
     //Alert ketika data berhasil ditemukan
     Swal.fire({
       icon: "success",
