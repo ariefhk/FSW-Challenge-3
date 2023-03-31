@@ -1,12 +1,16 @@
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 // const dir = path.resolve();
 // const staticFilePath = path.join(dir, "public");
+
 const app = express();
 
 const filePath = path.join(__dirname, "../public");
 
 // app.use(express.static("public"));
+
+app.use(cors());
 app.use(express.static(filePath));
 
 app.get("/", (req, res) => {
