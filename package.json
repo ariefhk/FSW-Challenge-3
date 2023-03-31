@@ -2,7 +2,7 @@
   "name": "fsw-challenge-3",
   "version": "1.0.0",
   "description": "- Mulai modifikasi file `server/index.js` apabila ingin membuat HTTP server.\r - Mulai modifikasi folder `public` apabila ingin memodifikasi HTML.",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/index.js"

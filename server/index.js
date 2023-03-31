@@ -11,16 +11,16 @@ const filePath = path.join(__dirname, "../public");
 // app.use(express.static("public"));
 
 app.use(cors());
-app.use(express.static(filePath));
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/", (req, res) => {
   // res.sendFile(path.join(staticFilePath, "index.html"));
-  res.sendFile(path.join(filePath, "index.html"));
+  res.sendFile(path.join(__dirname, "../public", "index.html"));
 });
 
 app.get("/cars", (req, res) => {
   // res.sendFile(path.join(staticFilePath, "cari_mobil.html"));
-  res.sendFile(path.join(filePath, "cari_mobil.html"));
+  res.sendFile(path.join(__dirname, "../public", "cari_mobil.html"));
 });
 
 app.get("*", function (req, res) {
