@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cari Mobil: Binar Car Rental</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Logo start -->
+
+    <link
+      rel="shortcut icon"
+      href="./images/binar_logo.png"
+      type="image/x-icon"
+    />
+    <!-- Logo end -->
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- Rubik Font start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Rubik Font end -->
+
+    <!-- AOS start -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS end -->
+
+    <!-- My Css start -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- <link rel="stylesheet" href="./css/landing_page.css" /> -->
+    <link rel="stylesheet" href="./css/cari_mobil.css" />
+    <!-- My Css end -->
+  </head>
+
+  <body>
+    <div class="filter" id="filter"></div>
+    <header id="header">
+      <!-- navbar start -->
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-lg fixed-top"
+        aria-label="Offcanvas navbar large"
+      >
+        <div class="container navbar--space">
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./images/brand.svg" alt="" srcset=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar2"
+            aria-controls="offcanvasNavbar2"
+          >
+            <span class="navbar-toggler-icon">
+              <img src="./images/ic_menu.svg" alt="" srcset="" />
+            </span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end navbar__ofc"
+            tabindex="-1"
+            id="offcanvasNavbar2"
+            aria-labelledby="offcanvasNavbar2Label"
+          >
+            <div class="offcanvas-header navbar__ofc--head">
+              <h5
+                class="offcanvas-title navbar__ofc--title"
+                id="offcanvasNavbar2Label"
+              >
+                BCR
+              </h5>
+              <button
+                type="button"
+                class="navbar__ofc--button"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <img src="./images/ic_x.svg" alt="" srcset="" />
+              </button>
+            </div>
+            <div class="offcanvas-body navbar__ofc--body">
+              <ul
+                class="navbar-nav ms-auto mb-lg-0 navbar--gap align-items-center"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link navbar__link"
+                    aria-current="page"
+                    href="./index.html#service"
+                    >Our Services</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link navbar__link" href="./index.html#whyus"
+                    >Why Us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link navbar__link"
+                    href="./index.html#testimonial"
+                    >Testimonial</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link navbar__link" href="./index.html#faq"
+                    >FAQ</a
+                  >
+                </li>
+                <div>
+                  <button class="btn btn-success navbar__btn" type="submit">
+                    Register
+                  </button>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+
+      <!-- hero start -->
+      <div id="hero" class="container">
+        <div class="row">
+          <div
+            class="col-sm-6 d-flex align-items-center hero--reset px-3 px-sm-0"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div class="hero__text">
+              <h1>
+                Sewa & Rental <br class="d-block d-sm-none" />
+                Mobil Terbaik di kawasan Ciamis
+              </h1>
+              <p>
+                Selamat datang di Binar Car Rental.<br
+                  class="d-block d-sm-none"
+                />
+                Kami menyediakan mobil kualitas <br class="d-sm-block d-none" />
+                terbaik dengan harga terjangkau. Selalu siap melayani
+                kebutuhanmu <br class="d-sm-block d-none" />
+                untuk sewa mobil selama 24 jam.
+              </p>
+              <!-- <button class="btn btn-success hero__btn">
+                Mulai Sewa Mobil
+              </button> -->
+            </div>
+          </div>
+          <div
+            class="col-sm-6 hero--reset"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <div class="hero__image">
+              <img src="./images/car.svg" alt="" srcset="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hero end -->
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="cars-form">
+          <form
+            id="form-container"
+            class="form-container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="form-box">
+              <label for="driver">Tipe Driver</label>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                name="driver"
+                id="driver"
+              >
+                <option selected class="select-placeholder">
+                  Pilih Tipe Driver
+                </option>
+                <option value="true" class="select-val">Dengan Sopir</option>
+                <option value="false" class="select-val">
+                  Tanpa Sopir (Lepas Konci)
+                </option>
+              </select>
+            </div>
+
+            <div class="form-box">
+              <label for="date">Tanggal</label>
+              <input type="date" name="date" id="date" class="form-control" />
+            </div>
+
+            <div class="form-box">
+              <label for="time">Waktu Jemput/Ambil</label>
+              <input type="time" name="time" id="time" class="form-control" />
+            </div>
+            <div class="form-box">
+              <label for="passenger">Jumlah Penumpang (Optional)</label>
+              <div class="form-input">
+                <i class="bi bi-people icon"></i>
+                <input
+                  class="form-control"
+                  type="number"
+                  placeholder="Jumlah Penumpang"
+                  name="passenger"
+                  id="passenger"
+                />
+              </div>
+            </div>
+            <div class="form-box">
+              <label for="btn-search-car" class="btn-search-car">....</label>
+              <button
+                id="btn-search-car"
+                name="btn-search-car"
+                type="button"
+                class="btn btn-success"
+              >
+                Cari Mobil
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="cars-data mt-5">
+          <div class="row p-0 gy-sm-4 gx-sm-4 gy-4" id="cars-container"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer start -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 footer__alamat d-flex flex-column gap-4">
+            <p>
+              Jalan Suroyo No. 161 Mayangan Kota
+              <br class="d-block d-sm-none" />
+              Probolonggo 672000
+            </p>
+            <p>binarcarrental@gmail.com</p>
+            <p>081-233-334-808</p>
+          </div>
+          <div class="col-sm-3 d-flex justify-content-sm-center footer__menu">
+            <div class="footer__menu--p d-flex flex-column gap-4">
+              <p class="footer--onhover">Our services</p>
+              <p class="footer--onhover">Why Us</p>
+              <p class="footer--onhover">Testimonial</p>
+              <p class="footer--onhover">FAQ</p>
+            </div>
+          </div>
+          <div class="col-sm-3 footer__sosmed d-flex flex-column gap-4">
+            <p>Connect with us</p>
+            <div class="d-flex gap-3 my-2 footer--icon">
+              <img src="./images/facebook_icon.svg" alt="" srcset="" />
+              <img src="./images/instagram_icon.svg" alt="" srcset="" />
+              <img src="./images/twitter_icon.svg" alt="" srcset="" />
+              <img src="./images/mail_icon.svg" alt="" srcset="" />
+              <img src="./images/twitch_icon.svg" alt="" srcset="" />
+            </div>
+          </div>
+          <div class="col-sm-3 d-flex flex-column gap-4 footer__copy">
+            <p>Copyright Binar 2022</p>
+            <div>
+              <a href="./index.html">
+                <img
+                  src="./images/brand.svg"
+                  alt=""
+                  srcset=""
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <!-- AOS -->
+
+    <!-- Custom Js for Navbar-->
+    <script>
+      var myNav = document.getElementById("navbar");
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop >= 200 ||
+          document.documentElement.scrollTop >= 200
+        ) {
+          myNav.classList.add("nav-colored");
+          myNav.classList.remove("nav-transparent");
+        } else {
+          myNav.classList.add("nav-transparent");
+          myNav.classList.remove("nav-colored");
+        }
+      };
+    </script>
+    <!-- Custom Js for Navbar-->
+
+    <!-- Bootstrap JavaScript Libraries start-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JavaScript Libraries end-->
+
+    <!-- My JavaScript File start -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./scripts/Utils/formatRupiah.js"></script>
+    <script src="./scripts/Utils/getRandomInt.js"></script>
+    <script src="./scripts/Component.js"></script>
+    <script src="./scripts/Car.js"></script>
+    <script src="./scripts/Data.js"></script>
+    <script src="./scripts/App.js"></script>
+    <script src="./scripts/index.js"></script>
+    <!-- My JavaScript File end -->
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
