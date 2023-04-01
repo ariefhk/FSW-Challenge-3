@@ -94,7 +94,7 @@
             </div>
             <div class="offcanvas-body navbar__ofc--body">
               <ul
-                class="navbar-nav ms-auto mb-lg-0 navbar--gap align-items-center"
+                class="navbar-nav ms-auto mb-lg-0 navbar--gap align-items-sm-center"
               >
                 <li class="nav-item">
                   <a
@@ -185,35 +185,76 @@
           >
             <div class="form-box">
               <label for="driver">Tipe Driver</label>
-              <select
-                class="form-select"
-                aria-label="Default select example"
-                name="driver"
-                id="driver"
-              >
-                <option selected class="select-placeholder">
-                  Pilih Tipe Driver
-                </option>
-                <option value="true" class="select-val">Dengan Sopir</option>
-                <option value="false" class="select-val">
-                  Tanpa Sopir (Lepas Konci)
-                </option>
-              </select>
+              <div class="form-box__input">
+                <img src="./images/down_input.svg" alt="" srcset="" />
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  name="driver"
+                  id="driver"
+                >
+                  <option selected class="select-placeholder">
+                    Pilih Tipe Driver
+                  </option>
+                  <option value="true" class="select-val">Dengan Sopir</option>
+                  <option value="false" class="select-val">
+                    Tanpa Sopir (Lepas Konci)
+                  </option>
+                </select>
+              </div>
             </div>
 
             <div class="form-box">
               <label for="date">Tanggal</label>
-              <input type="date" name="date" id="date" class="form-control" />
+              <div class="form-box__input">
+                <img
+                  src="./images/calendar_input.svg"
+                  alt=""
+                  srcset=""
+                  id="img-placeholder"
+                />
+                <input
+                  type="text"
+                  name="date"
+                  id="date"
+                  class="form-control"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                  placeholder="Pilih Tanggal"
+                />
+              </div>
             </div>
 
             <div class="form-box">
               <label for="time">Waktu Jemput/Ambil</label>
-              <input type="time" name="time" id="time" class="form-control" />
+              <div class="form-box__input">
+                <img
+                  src="./images/clock_input.svg"
+                  alt=""
+                  srcset=""
+                  id="img-placeholder"
+                />
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  name="time"
+                  id="time"
+                >
+                  <option selected class="select-placeholder">
+                    Pilih Waktu
+                  </option>
+                  <option value="08:00" class="select-val">08.00 WIB</option>
+                  <option value="09:00" class="select-val">09.00 WIB</option>
+                  <option value="10:00" class="select-val">10.00 WIB</option>
+                  <option value="11:00" class="select-val">11.00 WIB</option>
+                  <option value="12:00" class="select-val">12.00 WIB</option>
+                </select>
+              </div>
             </div>
             <div class="form-box">
               <label for="passenger">Jumlah Penumpang (Optional)</label>
-              <div class="form-input">
-                <i class="bi bi-people icon"></i>
+              <div class="form-box__input">
+                <img src="./images/users_input.svg" alt="" srcset="" />
                 <input
                   class="form-control"
                   type="number"

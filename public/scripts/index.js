@@ -1,9 +1,6 @@
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 
-// Coba olah data ini hehe :)
-console.log(urlSearchParams);
-
 async function getData() {
   try {
     let app = new App();
@@ -46,6 +43,14 @@ document.getElementById("form-container").addEventListener("click", () => {
 
 document.getElementById("btn-search-car").addEventListener("click", () => {
   getData();
+});
+
+document.getElementById("date").addEventListener("focus", () => {
+  document.getElementById("img-placeholder").style.display = "none";
+});
+
+document.getElementById("date").addEventListener("blur", () => {
+  document.getElementById("img-placeholder").style.display = "block";
 });
 
 document.addEventListener("DOMContentLoaded", function () {

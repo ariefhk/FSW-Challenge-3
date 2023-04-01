@@ -14,7 +14,6 @@ class App {
     await this.loadData();
 
     // Register click listener
-    // this.clearButton.onclick = this.clear;
     this.loadButton.onclick = this.run;
   }
 
@@ -23,8 +22,6 @@ class App {
     this.clearElement();
 
     let carDataforRender = this.filterCarData();
-
-    console.log("Value friver", typeof this.driver);
 
     //Handling ketika input form date dan time tidak lengkap
     if (!this.date || !this.time || this.driver == "Pilih Tipe Driver") {
@@ -56,8 +53,6 @@ class App {
       return;
     }
 
-    console.log(this.driver);
-
     //Alert ketika data berhasil ditemukan
     Swal.fire({
       icon: "success",
@@ -80,7 +75,7 @@ class App {
     this.clearElement();
 
     let dataCar = Car.list;
-    console.log(dataCar);
+
     dataCar.forEach((car) => {
       const node = document.createElement("div");
       node.classList.add("col-sm-4");
@@ -90,10 +85,9 @@ class App {
   };
 
   filterCarData = () => {
-    //Memformat tanggal dan waktu dari input form
+    //Reformatting datetime
     let dateTime = new Date(`${this.date} ${this.time}`);
 
-    //Filter list dari Class Car
     let filteredCarData = Car.list.filter((car) => {
       //Filter jika tidak memasukkan jumlah penumpang
       if (!passenger) {

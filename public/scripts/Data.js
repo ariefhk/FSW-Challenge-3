@@ -20,6 +20,7 @@ class Data {
     let cars;
     let cachedCarData = localStorage.getItem("Car");
 
+    // If Localstorage is empty
     if (!cachedCarData) {
       try {
         let response = await fetch(

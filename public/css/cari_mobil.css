@@ -23,11 +23,6 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-.cars-form,
-.cars-data {
-  margin: 0 64px;
-}
-
 /* Global end*/
 
 /* handling sweet alert start */
@@ -255,6 +250,33 @@ body {
   flex-direction: column;
 }
 
+.form-box__input {
+  position: relative;
+}
+
+.form-box__input .form-select {
+  background-image: none;
+}
+
+.form-box__input img {
+  position: absolute;
+  right: 0;
+  width: 25px;
+  padding-right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
 .form-box label {
   font-family: "Rubik", sans-serif;
   color: #3c3c3c;
@@ -305,11 +327,19 @@ body {
 .form-box .btn-success:hover {
   background-color: var(--btn-hover);
 }
+.cars-form,
+.cars-data {
+  margin: 0 64px;
+}
 
 @media (max-width: 576px) {
+  .cars-form,
+  .cars-data {
+    margin: 0 30px;
+  }
   .form-container {
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
   }
 }
 
