@@ -4,7 +4,7 @@ const dir = path.resolve();
 const staticFilePath = path.join(dir, "public");
 
 const app = express();
-
+console.log(staticFilePath);
 app.use(express.static(staticFilePath));
 
 app.get("/", (req, res) => {
@@ -15,10 +15,9 @@ app.get("/cars", (req, res) => {
   res.sendFile(path.join(staticFilePath, "cari_mobil.html"));
 });
 
-app.get("*", function (req, res) {
-  res.send("Halaman Tidak ditemukan!", 404);
-});
-
-app.listen(3000, () => {
-  console.log("Server Listen on port http://localhost:%d", 3000);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(
+    "Server Listen on port http://localhost:",
+    process.env.PORT || 3000
+  );
 });
