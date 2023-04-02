@@ -1,6 +1,6 @@
 class Component {
   constructor() {
-    if (this.constructor.name === Component) {
+    if (this.constructor === Component) {
       throw new Error("Tidak bisa membuat instance dari Abstract Class!");
     }
   }
